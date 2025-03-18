@@ -1,0 +1,53 @@
+/* * {
+  color: hotpink;
+}*/
+h1 {
+  color: lime;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: antiquewhite;
+  font-size: 1.3rem;
+  font-family: "Big Shoulders Stencil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} /*body改背景顏色 Background-color*/
+h2,
+h3 {
+  color: brown;
+} /*同時兩種格式顏色一樣用逗號隔開*/
+
+.blue-colour {
+  color: blue;
+}
+#pink {
+  color: pink;
+}
+
+section {
+  border: 1px solid red;
+  text-align: center;
+} /*先用HTML把要的東西先包進section裡面就可以至中 Border是編匡*/
+
+/*
+h1 {
+  color: red;
+}
+h2 {
+  color: green;
+  font-weight: bold;
+}
+h3 {
+  color: blueviolet;
+}
+
+li {
+  color: rgb(106, 67, 17);
+}
+p {
+  color: blue;
+  font-weight: bold;
+}
+*/
