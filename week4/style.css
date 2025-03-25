@@ -1,0 +1,31 @@
+body {
+  font-size: 1.1rem;
+  text-align: center;
+}
+/*Span用在指定某些字的效果時命名* 也可以用class但不建議*/
+h1 {
+  font-size: bold;
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  border: 1px solid rgb(140, 50, 68); /*外誆*/
+  width: 400px; /*是固定ㄉ因為字一行固定75*/
+  min-height: 300px; /*用Min height 來做長度才不會不夠*/
+  margin: 0 auto; /*把東西橫向至中*/
+  padding: 20px 30px 30px 40px; /*文字跟周圍編筐的空間 上右下左順時計
+  /*padding-left: 30px;
+  padding-top: 40px;*/
+  margin-bottom: 20px; /*匡外面的空間*/
+  border-bottom: 2px dashed green; /*只有下面的筐 dashed-虛線*/
+}
+
+.myparagraph {
+  line-height: 150px;
+}
+span {
+  color: violet;
+  display: block;
+} /*display block 自己單獨一行*/ /*display:none*/
