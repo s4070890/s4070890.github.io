@@ -95,6 +95,10 @@ h3 {
   font-family: sans-serif;
   font-weight: bold;
 }
+h4 {
+  font-family: sans-serif;
+  font-weight: bold;
+}
 p {
   font-family: sans-serif;
 }
@@ -176,4 +180,192 @@ p {
 }
 .context3 {
   width: 30%;
+}
+.q4,
+.q10 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+.q4 h3 {
+  width: 30%;
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+
+.q4 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.q567 {
+  display: flex;
+  gap: 10px;
+  padding-top: 5%;
+}
+.q {
+  flex: 1;
+  background-color: #cecece8f;
+  padding: 3%;
+}
+.q h3 {
+  color: #0d364fde;
+  font-display: bold;
+  padding-bottom: 5%;
+}
+.q p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.q8 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+.q8 h3 {
+  width: 30%;
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+.q8 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.q9title h3 {
+  color: #0d364fde;
+  font-display: bold;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid #c6ac7f;
+}
+
+.q9 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  padding: 3%;
+}
+
+.box-content h4 {
+  color: #0d364fde;
+  font-display: bold;
+  padding-bottom: 5%;
+}
+.box-content p {
+  text-align: left;
+}
+
+.q10 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+
+.q10 h3 {
+  width: 30%;
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+
+.q10 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.q11 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+.q11 h3 {
+  width: 30%;
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+
+.q12 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.q12 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+.q12 h3 {
+  width: 30%;
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+
+.q12 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.q13 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.q13 h3 {
+  width: 30%;
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+
+.q13 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+footer {
+  background-color: #567884;
+  border: 10pt solid #567884;
+  .contextf {
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    flex-wrap: wrap;
+  }
 }
