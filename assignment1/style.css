@@ -1,0 +1,179 @@
+body {
+  background-color: #fff1e6;
+  font-size: 1.1rem;
+  text-align: center;
+  max: width 75ch;
+}
+
+.cover.page {
+  position: relative;
+  width: 100%;
+}
+
+.cover.page img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.saira-stencil-one-regular {
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.plaster-regular {
+  font-family: "Plaster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.scheherazade-new-regular {
+  font-family: "Scheherazade New", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.scheherazade-new-medium {
+  font-family: "Scheherazade New", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.scheherazade-new-semibold {
+  font-family: "Scheherazade New", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.scheherazade-new-bold {
+  font-family: "Scheherazade New", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.overphototext h1 {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overphototext h1 {
+  font-family: "Plaster", "Saira Stencil One", sans-serif;
+  font-size: clamp(3rem, 12vw, 30rem); /* 根據視窗大小調整字體 */
+  text-align: center;
+  color: white;
+  max-width: 100%; /* 限制 h1 的最大寬度，避免過多空白 */
+  margin: auto;
+  white-space: nowrap; /* 避免換行 */
+}
+.overphototext h2,
+.overphototext h3 {
+  position: absolute;
+  right: 5%; /* Position both elements 10% from the right edge of the container */
+  text-align: right;
+  font-family: "Scheherazade New", serif;
+  font-size: clamp(
+    0.5rem,
+    2vw,
+    3rem
+  ); /* Adjust the font size based on the window */
+  color: white;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+.overphototext h2 {
+  top: 18%; /* Vertical position of h2 */
+}
+
+.overphototext h3 {
+  top: 24%; /* Vertical position of h3 */
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+p {
+  font-family: sans-serif;
+}
+
+.Q1 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  padding-bottom: 3%;
+  padding-right: 5%;
+}
+
+.Q1 img {
+  width: 50%;
+}
+.Q1 h3 {
+  font-display: bold;
+  background-color: #cecece8f;
+  color: #0d364fde;
+  padding: 10px;
+  margin: auto;
+}
+.Q1 p {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.Q2 h3 {
+  color: #0d364fde;
+  font-display: bold;
+  padding: 10px;
+  border-bottom: 2px solid #c6ac7f;
+  margin: auto;
+}
+.list {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+.list1 {
+  width: 50%;
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+.list2 {
+  width: 50%;
+  list-style-type: none;
+  line-height: 1.5;
+}
+.Q2 img {
+  width: 120%;
+  padding-bottom: 5%;
+}
+
+.q3 {
+  display: flex;
+  align-items: center; /* 垂直置中對齊 */
+  gap: 60px; /* 設定圖片與文字的間距 */
+  text-align: left;
+  padding: 3%;
+}
+
+.q3 h3 {
+  color: #0d364fde;
+  font-display: bold;
+  background-color: #cecece8f;
+  padding: 10px;
+  margin: auto;
+}
+.q3 p {
+  text-align: left;
+  padding-top: 30px;
+}
+.img2 {
+  width: 70%;
+}
+.context3 {
+  width: 30%;
+}
