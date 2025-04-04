@@ -337,8 +337,8 @@ p {
 
 .q12 {
   display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
 }
@@ -358,8 +358,8 @@ p {
 
 .q13 {
   display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
   padding-top: 5%;
