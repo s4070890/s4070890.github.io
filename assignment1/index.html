@@ -3,32 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Zoe Lin - A1 Website Review</title>
+    <!-- Link style css file and reset css file that we did in class -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Link google font website -->
     <link rel="preconnect" href="https://fonts.google.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font1-Saira Stencil One, Backup font for H1  -->
     <link
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Saira+Stencil+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Font2-Plaster, Font for H1(Coverpage title) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Plaster&display=swap"
       rel="stylesheet"
     />
+    <!-- Font3-Scheherazade New, Font for H2H3(Coverpage subtitle) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap"
       rel="stylesheet"
     />
+    <!-- Favicon, During class we explore the website that allow us to create our own favicon with different background colour and name. That was the first time I know how it is made. -->
+    <!-- I discovered a website online to help people turn picture into favicon format, so I decide to use treble clef as my website's favicon. Because the website is about music and treble clef symbolize the beginning of each chapter and I reckon the favicon are the beginning of the website.-->
     <link rel="apple-icon" sizes="180x180" href="apple-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
   </head>
+
   <body>
+    <!-- I create a section to put all the things that should be in the home page here.-->
     <section class="cover page">
       <img src="coverphoto.png" alt="This is a cover photo" />
+      <!-- flexbox only affect children not grandchildren -->
+      <!-- I create a div here to make sure that these words are able to be the child from section(coverpage) because I need to use flexbox to layout. -->
       <div class="overphototext">
         <h1>WEB.REVIEW</h1>
         <h2>Zoe Lin.Assignment1</h2>
@@ -36,15 +48,17 @@
       </div>
     </section>
 
+    <!-- Q1=all elements of question1 -->
     <section class="Q1">
       <img src="q1photo.png" alt="This is a photo for question 1" />
-
+      <!-- 1context(child of Q1) Because I would like to use flexbox the make the picture on left and contexts on right side.-->
       <section class="1context">
+        <!-- All the question in H3 because I would like them in the same font style -->
         <h3>
           1. What was the first thing you paid attention to when interacting
           with the experience?
         </h3>
-
+        <!-- Response in p -->
         <p>
           The first thing I noticed while interacting with the website was that
           it provided an interaction hint right next to the user’s mouse on the
@@ -65,12 +79,15 @@
       </section>
     </section>
 
+    <!-- Q2=all elements of question2 -->
     <section class="Q2">
       <h3>
         2. Spend two minutes with the experience and create a list of each of
         your discrete actions.
       </h3>
+      <!-- Because there are a lot of steps happened in this 2 minutes, so I decide to display them in 2 rows list-->
       <section class="list">
+        <!-- list1(step1-5 Left) It was step1-6 but I rearrange it by the context amount to make visually balance between left and right.-->
         <ul class="list1">
           <li><b>Step 1.</b> Open the website via the link.</li>
           <li>
@@ -113,10 +130,13 @@
           <li><b>Step 12.</b> Click on “Getty” to return to the homepage.</li>
         </ul>
       </section>
+      <!-- A picture here to show step3 because I reckon that was very cool -->
       <img src="q2photo.jpeg" alt="This is a photo for question 2" />
     </section>
 
+    <!-- q3=all elements of question3 -->
     <section class="q3">
+      <!-- context3 for using flexbox with img due to I just want 2 rows-->
       <section class="context3">
         <h3>
           3. What part of the experience did you spend the most time engaging
@@ -136,11 +156,13 @@
       />
     </section>
 
+    <!-- q4=all elements of question4 -->
     <section class="q4">
       <h3>
         4. What was the most common action in your two minute interaction with
         the experience?
       </h3>
+      <!-- context4 to wrapup p because I plan the H3(question) in one row and the 2p(reponse) in one row  -->
       <section class="context4">
         <p>
           On this website, the majority of the interactions are click and scroll
@@ -158,6 +180,7 @@
       </section>
     </section>
 
+    <!-- q8=all elements of question8. It might be werid to put question8 here but just for the layout because i find out their context weight are simliar, it good to do in the same format and put the same layout really increase the visual. -->
     <section class="q8">
       <h3>
         8. How does the interactive experience communicate how it should be
@@ -172,7 +195,9 @@
       </section>
     </section>
 
+    <!-- q567=all elements of question567 -->
     <section class="q567">
+      <!-- I use 3 section(q) cause I want them layout in 3 rows with the same style. -->
       <section class="q">
         <h3>
           5. What is your impression of the intended primary goal of the
@@ -218,13 +243,15 @@
         </p>
       </section>
     </section>
+
+    <!-- q9title=title of question9. I make it in a single line because I plan to make the response in 4rows. just dont want to count which section is which's childeren -->
     <section class="q9title">
       <h3>
         9. What other media forms (digital or otherwise) does the experience
         reference?
       </h3>
     </section>
-
+    <!-- I write 4 box to storege the contexts because I would like them to use the same layout & font style -->
     <section class="q9">
       <div class="box">
         <div class="box-content">
@@ -272,11 +299,13 @@
       </div>
     </section>
 
+    <!-- q10=all elements of question10 -->
     <section class="q10">
       <h3>
         10. What does this reference/s communicate to you about how you should
         act when engaging with your research experience?
       </h3>
+      <!-- context10 to wrapup p because I plan the H3(question) in one row and the 2p(reponse) in one row  -->
       <section class="context10">
         <p>
           I realized it looks like just an interactive website design, but it
@@ -297,6 +326,7 @@
       </section>
     </section>
 
+    <!-- q11=all elements of question11. Same logic as question10 -->
     <section class="q11">
       <h3>
         11. What does this reference/s communicate to you about how you should
@@ -319,6 +349,7 @@
       </section>
     </section>
 
+    <!-- q12=elements of question12. Same logic as question10 -->
     <section class="q12">
       <h3>
         12. What is the most frustrating part of the interaction to you and what
@@ -345,12 +376,14 @@
         </p>
       </section>
     </section>
-
+    <!-- Was not plan to add it but accidently saw a nice picture so just add here -->
     <img
       class="img12"
       src="q12photo.png"
       alt="This is a photo for question 12."
     />
+
+    <!-- q13=elements of question13. Same logic as question10 -->
     <section class="q13">
       <h3>
         13. What is the most satisfying part of the interaction to you and what
@@ -365,10 +398,12 @@
       </p>
     </section>
   </body>
-
+  <!-- Reference -->
   <footer>
+    <!-- I feel it is good to add the reference here, owing to I saw people majority put copyright at footer.-->
     <p class="contextf">
       Website Reference: Frank Gehry and the Walt Disney Concert Hall:
+      <!-- Not words in target - info was include in p -->
       <a href="https://gehry.getty.edu" target="_blank"
         >https://gehry.getty.edu</a
       >

@@ -1,33 +1,48 @@
 body {
+  /* I chhose this beige colour for background to create a soft vibe.  */
+  /* Rem for font size instead of pt just to make sure it can scale based on user perference */
   background-color: #fff1e6;
   font-size: 1.1rem;
   text-align: center;
-  max: width 75ch;
+  max-width: 75ch;
 }
 
+/* Adjust overall text style */
+h3 {
+  font-family: sans-serif; /* I use sans serif font for the contexts due to this kind of font is easier to read via screen */
+  font-weight: bold; /* H3 is setting as question just want emphasis it*/
+}
+h4 {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+p {
+  font-family: sans-serif; /* readablility on screen */
+}
 .cover.page {
   position: relative;
   width: 100%;
 }
 
+/* Make width 100% & display in block to make sure picture is full page, height auto to avoid aspect ratio */
 .cover.page img {
   width: 100%;
   height: auto;
   display: block;
 }
-
+/* Backup font for H1, I end up with using Plaster cause I feel it fit the style with the website better.  */
 .saira-stencil-one-regular {
   font-family: "Saira Stencil One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
+/* Font for H1, I choose this font because it's style looks a bit simliar to the website I am analysis. Also it has some rounded part really fit with the building in coverpage */
 .plaster-regular {
   font-family: "Plaster", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-
+/* Font for H2 and H3. This is a serif font which bring people an elegance feeling, I feel those music they use in the webpage are orchestra so I just want to recall this vibe .  */
 .scheherazade-new-regular {
   font-family: "Scheherazade New", serif;
   font-weight: 400;
@@ -51,115 +66,114 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-
+/* Adjust over photo text position */
 .overphototext h1 {
   position: absolute;
+  /* I am trying to put the title in the right place */
   top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
+/* Adjust over photo text style */
 .overphototext h1 {
-  font-family: "Plaster", "Saira Stencil One", sans-serif;
-  font-size: clamp(3rem, 12vw, 30rem); /* 根據視窗大小調整字體 */
+  font-family: "Plaster", "Saira Stencil One", sans-serif; /* Make sure there are more than one font as backup */
+  font-size: clamp(
+    3rem,
+    12vw,
+    30rem
+  ); /* font size adjust based in the interface size */
   text-align: center;
   color: white;
-  max-width: 100%; /* 限制 h1 的最大寬度，避免過多空白 */
+  max-width: 100%; /* limit the max size to avoid it out of frame */
   margin: auto;
-  white-space: nowrap; /* 避免換行 */
+  white-space: nowrap; /* no line break */
 }
+/* Adjust over photo text style */
 .overphototext h2,
 .overphototext h3 {
   position: absolute;
-  right: 5%; /* Position both elements 10% from the right edge of the container */
+  right: 5%; /* Position both elements 5% from the right edge of the container */
   text-align: right;
   font-family: "Scheherazade New", serif;
+
   font-size: clamp(
     0.5rem,
     2vw,
     3rem
-  ); /* Adjust the font size based on the window */
+  ); /* font size adjust based in the interface size */
   color: white;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap; /* no line break */
 }
+/* Adjust over photo text position */
 .overphototext h2 {
-  top: 18%; /* Vertical position of h2 */
+  top: 18%; /* adjust position */
 }
 
 .overphototext h3 {
-  top: 24%; /* Vertical position of h3 */
-}
-
-h3 {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-h4 {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-p {
-  font-family: sans-serif;
+  top: 24%;
 }
 
 .Q1 {
-  display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
-  padding-bottom: 3%;
+  display: flex; /* create 2 rows */
+  align-items: center;
+  gap: 60px; /* setting space between picture and texts */
+  padding-bottom: 3%; /* make sure space for next question */
   padding-right: 5%;
 }
 
 .Q1 img {
-  width: 50%;
+  width: 50%; /* size of picture */
 }
 .Q1 h3 {
   font-display: bold;
-  background-color: #cecece8f;
-  color: #0d364fde;
-  padding: 10px;
+  background-color: #cecece8f; /*background colour for question */
+  color: #0d364fde; /* different colour for question. I choose this colour because it is simliar with the background colour and have a elegance vibe which is fit with the orchestra music from the website I am reviewing */
+  padding: 10px; /* keep space & for background colour */
   margin: auto;
 }
 .Q1 p {
   text-align: left;
-  padding-top: 30px;
+  padding-top: 30px; /* to creat some space between each paragrah */
 }
 
 .Q2 h3 {
   color: #0d364fde;
   font-display: bold;
   padding: 10px;
-  border-bottom: 2px solid #c6ac7f;
+  border-bottom: 2px solid #c6ac7f; /* create a line to separate question and response, colour is just a darker version of website background colour*/
   margin: auto;
 }
 .list {
-  display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  display: flex; /* create rows*/
+  font-family: sans-serif;
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
 }
 .list1 {
-  width: 50%;
+  font-family: sans-serif;
+  width: 50%; /* make sure 2 rows are equal size*/
   list-style-type: none;
-  line-height: 1.5;
+  line-height: 1.5; /* increase readability*/
 }
 
 .list2 {
+  font-family: sans-serif;
   width: 50%;
   list-style-type: none;
   line-height: 1.5;
 }
 .Q2 img {
-  width: 120%;
-  padding-bottom: 5%;
+  width: 120%; /* size adjust ,the orginal image is a bit too small */
+  padding-bottom: 5%; /* leave space between question 2 and 3 */
 }
 
 .q3 {
-  display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  display: flex; /* create rows*/
+  align-items: center;
+  gap: 60px; /* space between rows*/
   text-align: left;
   padding: 3%;
 }
@@ -173,24 +187,24 @@ p {
 }
 .q3 p {
   text-align: left;
-  padding-top: 30px;
+  padding-top: 30px; /* leave space between question and response */
 }
 .img2 {
-  width: 70%;
+  width: 70%; /* be 70% of row*/
 }
 .context3 {
-  width: 30%;
+  width: 30%; /* use 30% of row*/
 }
-.q4,
+.q4, /* discover they can use the same setting so I just put together*/
 .q10 {
   display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
 }
 .q4 h3 {
-  width: 30%;
+  width: 30%; /* 30% of row */
   color: #0d364fde;
   font-display: bold;
   background-color: #cecece8f;
@@ -200,33 +214,36 @@ p {
 
 .q4 p {
   text-align: left;
-  padding-top: 30px;
+  padding-top: 30px; /* space between q&a*/
 }
 
 .q567 {
+  /* Do it together cause they are in the same flexbox*/
   display: flex;
   gap: 10px;
   padding-top: 5%;
 }
+/* The contexts of question 5,6&7 are all include in q */
 .q {
-  flex: 1;
+  flex: 1; /* make sure box space are equal */
   background-color: #cecece8f;
   padding: 3%;
 }
 .q h3 {
   color: #0d364fde;
   font-display: bold;
-  padding-bottom: 5%;
+  padding-bottom: 5%; /* space between q&a */
 }
 .q p {
   text-align: left;
-  padding-top: 30px;
+  padding-top: 30px; /* space between q&a */
 }
 
 .q8 {
+  /* setting same as the front */
   display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
 }
@@ -244,6 +261,7 @@ p {
 }
 
 .q9title h3 {
+  /* setting same as question 2 */
   color: #0d364fde;
   font-display: bold;
   padding-top: 5%;
@@ -252,30 +270,32 @@ p {
 }
 
 .q9 {
-  display: flex;
+  display: flex; /* create rows */
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* auto link break based on window size */
   justify-content: space-between;
 }
 
 .box {
-  flex: 1;
+  flex: 1; /*create rows  */
   padding: 3%;
 }
 
 .box-content h4 {
+  /* it should suppose to be h3  */
   color: #0d364fde;
   font-display: bold;
-  padding-bottom: 5%;
+  padding-bottom: 5%; /*space between q&a  */
 }
 .box-content p {
-  text-align: left;
+  text-align: inherit; /* I actually do not know why I use this. I just try every hint pop up while I type text-align and this one turned out best  */
 }
 
+/* q10-q13 same as question3 */
 .q10 {
   display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
 }
@@ -296,8 +316,8 @@ p {
 
 .q11 {
   display: flex;
-  align-items: center; /* 垂直置中對齊 */
-  gap: 60px; /* 設定圖片與文字的間距 */
+  align-items: center;
+  gap: 60px;
   text-align: left;
   padding: 3%;
 }
@@ -310,7 +330,7 @@ p {
   margin: auto;
 }
 
-.q12 p {
+.q11 p {
   text-align: left;
   padding-top: 30px;
 }
@@ -358,14 +378,15 @@ p {
   text-align: left;
   padding-top: 30px;
 }
-
+/* reference */
 footer {
-  background-color: #567884;
-  border: 10pt solid #567884;
+  background-color: #567884; /* the colour is darker to emphasis this is the end of the page*/
+  border: 10pt solid #567884; /* make the footer wilder to fit with text */
   .contextf {
-    font-size: 1rem;
+    font-size: 1rem; /* a bit smaller than the q&a text */
     text-align: center;
     color: #ffffff;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* make sure it wrap bt window size */
   }
 }
+/* This is an interesting experience to try HTML & CSS! I practice online some time it really help me getting more familiar with coding language, I know there are a lot of place can be simplify (But my friends who is study computer engineer tell me: As long as the code is working than just keep it hahaha) */
