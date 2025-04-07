@@ -4,7 +4,11 @@ body {
   background-color: #fff1e6;
   font-size: 1.1rem;
   text-align: center;
-  max-width: 75ch;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
 /* Adjust overall text style */
@@ -81,7 +85,7 @@ p {
   font-size: clamp(
     3rem,
     12vw,
-    30rem
+    35rem
   ); /* font size adjust based in the interface size */
   text-align: center;
   color: white;
@@ -96,11 +100,12 @@ p {
   right: 5%; /* Position both elements 5% from the right edge of the container */
   text-align: right;
   font-family: "Scheherazade New", serif;
+  max-width: 100%;
 
   font-size: clamp(
     0.5rem,
     2vw,
-    3rem
+    2.5rem
   ); /* font size adjust based in the interface size */
   color: white;
   white-space: nowrap; /* no line break */
@@ -108,13 +113,16 @@ p {
 /* Adjust over photo text position */
 .overphototext h2 {
   top: 18%; /* adjust position */
+  max-width: 100%;
 }
 
 .overphototext h3 {
   top: 24%;
+  max-width: 100%;
 }
 
 .Q1 {
+  max-width: 100%;
   display: flex; /* create 2 rows */
   align-items: center;
   gap: 60px; /* setting space between picture and texts */
@@ -124,6 +132,7 @@ p {
 
 .Q1 img {
   width: 50%; /* size of picture */
+  max-width: 100%;
 }
 .Q1 h3 {
   font-display: bold;
