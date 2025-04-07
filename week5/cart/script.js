@@ -4,8 +4,9 @@ let shoppingCart = [
   { name: "Sneakers", price: 80 },
   { name: "Backpack", price: 30 },
 ];
+
 console.log(shoppingCart);
-let total = 0;
+let total = 0; //還沒開始執行前的總金額
 for (let i = 0; i < shoppingCart, length; i++) {
   (total = total + shoppingCart[i]), price;
   console.log("Total so far is", total);
