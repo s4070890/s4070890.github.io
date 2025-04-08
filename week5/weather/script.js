@@ -18,3 +18,13 @@ if (temp > 10) {
 } else if (temp >= 20 && temp < 35) {
   console.log("nice waether");
 }
+
+function subtract(a, b) {
+  let res = a - b;
+}
+let marks = 36;
+let grade = WhatIsMyGrade(marks){
+    if (marks>80){
+        
+    }
+}

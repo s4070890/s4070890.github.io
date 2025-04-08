@@ -28,7 +28,7 @@ console.log("I live in", myCity); //網頁顯示問題回答後主控台有答�
   console.log(c);
 }
 
-//string variables
+//string variables=any text in"""
 const myNames = "Rohit";
 console.log(myNames);
 const myCitys = "Melbourne";
@@ -38,11 +38,11 @@ const msg = `
 <h1>I live in ${myCitys}</h1> 
 <p>I love this city</p>`;
 
-//boolem variable TRUE FALSE
+//boolem variable = TRUE FALSE
 let isThisSunady = false;
 let isItAfternoon = true;
 
-//一個大資料裡包含子項只有文字有"“
+//一個大資料裡包含子項只有文字有"“ {裡面任意定義}
 const myStudentRecord = {
   name: "Sam",
   id: 1234,
@@ -59,6 +59,7 @@ let sNames = ["Rohit", "Jim", "Sara", "Alice"];
 //類似於for迴圈 for (let i = 0表示從頭開始; i < 母項名.length確保運轉; i++向上遞加) {
 for (let i = 0; i < sNames.length; i++) console.log("Hello", sNames[i]);
 
+//arrays
 let numbers = [2, 4, 6, 8, 10];
 console.log(numbers[3]); //數字從0開始算呦
 
@@ -73,7 +74,7 @@ if (grade > 70) {
   console.log("Sorry you just pass the course");
 }
 
-// Always use three=== to make sure they are extraly same including format
+// Always use three === to make sure they are extraly same including format
 let weather = "sunny";
 if (weather === "sunny") {
   console.log("What a nice pleasent sunny weather");
