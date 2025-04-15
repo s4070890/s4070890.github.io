@@ -1,0 +1,29 @@
+:root {
+  background-color: rgb(162, 195, 195);
+  --bg-color: rgb(77, 77, 180);
+}
+
+audio,
+video {
+  /*make button in single 1 line*/
+  display: block;
+  margin-bottom: 20px;
+}
+
+video {
+  width: 600px;
+  height: 400px;
+}
+
+button {
+  /* Style button*/
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  margin-right: 10px;
+  cursor: pointer; /*讓滑鼠變成手指暗示使用者*/
+}
+
+button:hover {
+  scale: 0.9; /* expand button while hover over*/
+}
