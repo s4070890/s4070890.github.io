@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berry Bunch Family Crafts - Tutorial</title>
+
+    <!-- Add font family of your choice -->
+    <link rel="preconnect" href="https://fonts.google.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Link for fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to CSS & JavaScript -->
+    <link rel="stylesheet" href="index.html" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="headernav">
+      <h1>Berry Bunch Family Crafts - Tutorial</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Tutorial</a></li>
+          <li><a href="#">Words</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+      <!-- Media Player Section -->
+      <video id="craft-video">
+        <source
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <div class="progress-bar">
+        <span id="progress-bar-fill"></span>
+      </div>
+
+      <div class="custom-controls">
+        <button id="play-pause-btn" onclick="togglePlayPause()">
+          <img
+            id="play-pause-img"
+            src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+            alt="Play Button"
+            width="24"
+            height="24"
+          />
+        </button>
+
+        <button id="volume-down-btn" onclick="changeVolume(-0.2)">
+          <img
+            id="volume-down-img"
+            src="https://img.icons8.com/?size=100&id=91634&format=png&color=000000"
+            alt="Lower Volume"
+            width="24"
+            height="24"
+          />
+        </button>
+
+        <button id="volume-up-btn" onclick="changeVolume(0.2)">
+          <img
+            id="volume-up-img"
+            src="https://img.icons8.com/?size=100&id=59734&format=png&color=000000"
+            alt="Increase Volume"
+            width="24"
+            height="24"
+          />
+        </button>
+
+        <button id="full-screen-btn" onclick="toggleFullScreen()">
+          <img
+            id="full-screen-img"
+            src="https://img.icons8.com/?size=100&id=69155&format=png&color=000000"
+            alt="Full Screen"
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
+
+      <!-- Step Timeline -->
+      <section class="timeline">
+        <button id="step-1-btn">Step 1</button>
+        <button id="step-2-btn">Step 2</button>
+        <button id="step-3-btn">Step 3</button>
+        <button id="step-4-btn">Step 4</button>
+        <button id="step-5-btn">Step 5</button>
+        <button id="step-6-btn">Step 6</button>
+        <button id="step-7-btn">Step 7</button>
+        <button id="step-8-btn">Step 8</button>
+        <button id="step-9-btn">Step 9</button>
+        <button id="step-10-btn">Step 10</button>
+        <button id="done-btn">DONE!</button>
+      </section>
+
+      <!-- Step Instructions -->
+      <section class="step-text">
+        <h3>Step 1</h3>
+        <p>
+          Prepare materials: Paper, Scissors, Glue dot, Ruler, Pen, Straws &
+          Pipe Cleaner.
+        </p>
+
+        <h3>Step 2</h3>
+        <p>Make a 12 x 12 cm square.</p>
+
+        <h3>Step 3</h3>
+        <p>Fold it in half as triangle.</p>
+
+        <h3>Step 4</h3>
+        <p>Repeat again in another direction.</p>
+
+        <h3>Step 5</h3>
+        <p>Make holes and cuts.</p>
+
+        <h3>Step 6</h3>
+        <p>Bring the flaps through sticks in the centre.</p>
+
+        <h3>Step 7</h3>
+        <p>
+          Take a paper, press hard with glue stick and cut out the inprint part.
+        </p>
+
+        <h3>Step 8</h3>
+        <p>Make a hole on the circle you just cut.</p>
+
+        <h3>Step 9</h3>
+        <p>Wrap pipe cleaner around straw and assemble the washer.</p>
+
+        <h3>Step 10</h3>
+        <p>Cut the pipe cleaner and wrap around.</p>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <p>All icons by <a href="https://icons8.com">Icons8</a></p>
+    </footer>
+  </body>
+</html>

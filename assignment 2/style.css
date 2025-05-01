@@ -1,9 +1,62 @@
 :root {
-  --primary-bg-color: #f4f4f4;
+  --primary-bg-color: #f6f4ea;
   --text-color: #333;
-  --main-bg-color: #333;
+  --main-bg-color: #b0d0c3; /* 改了顏色 */
   --main-text-color: #fff;
-  --main-btn-bg-color: #938989;
+  --main-btn-bg-color: #6896a8;
+}
+
+.dynapuff-title {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600; /* 實際數值，如 400, 500, 600, 700 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.fredoka {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700; /* 可改成 300、500、700... 看你需要的粗細 */
+  font-style: normal;
+}
+
+.cover-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cover-text {
+  position: absolute;
+  top: 55%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 真正居中 */
+  text-align: center;
+  font-family: "DynaPuff", system-ui;
+  font-size: clamp(0.1rem, 4vw, 6rem);
+  color: rgb(214, 148, 148);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#start-btn {
+  padding: 10px 20px;
+  background-color: #6896a8;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 2vw, 2rem);
+}
+#start-btn:hover {
+  background-color: #e9b04d; /* 滑過時變深一點 */
 }
 
 body,
@@ -31,56 +84,70 @@ body {
 .container {
   max-width: 1000px;
   width: 100%;
-  padding: 10px;
+  padding: 50px;
+  align-content: center;
 }
 
 /* Header styling */
-header {
+
+.headernav {
+  display: flex;
+  justify-content: space-between; /* h1 在左、nav 在右 */
+  align-items: center; /* 垂直置中 */
   background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 0;
-  text-align: center;
+  color: #307793;
+  padding: 10px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Navigation styling */
-nav {
-  margin-top: 20px;
-  text-align: center;
+.headernav h1 {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Fredoka", sans-serif;
 }
 
-nav ul {
+.headernav nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
+.headernav nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: #307793; /* 白色字或你設定的顏色 */
+  font-weight: bold;
+}
+
+.headernav nav a:hover {
+  text-decoration: underline;
 }
 
 /* Media player styling */
 .media-player {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* 垂直排列影片與控制項 */
+  align-items: center; /* 水平置中 */
+  justify-content: center; /* 可有可無，看需不需要垂直居中 */
+  margin: 20px auto;
 }
 
 .media-player video {
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
 
 .custom-controls {
+  width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   margin-top: 10px;
-  width: 100%;
 }
 
 .custom-controls button {
@@ -96,10 +163,10 @@ nav a {
 
 .progress-bar {
   width: 100%;
+  max-width: 600px;
   height: 10px;
   background-color: #ddd;
   margin-top: 10px;
-  overflow: hidden;
 }
 
 .progress-bar span {
@@ -117,4 +184,6 @@ footer {
   text-align: center;
   padding: 10px 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
