@@ -41,6 +41,7 @@
   font-family: "DynaPuff", system-ui;
   font-size: clamp(0.1rem, 4vw, 6rem);
   color: rgb(214, 148, 148);
+  font-weight: 700;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -82,10 +83,11 @@ body {
 
 /* Create a container for the main content */
 .container {
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
-  padding: 50px;
+  padding: 0px;
   align-content: center;
+  flex: auto;
 }
 
 /* Header styling */
@@ -127,54 +129,136 @@ body {
 
 /* Media player styling */
 .media-player {
-  display: flex;
-  flex-direction: column; /* 垂直排列影片與控制項 */
-  align-items: center; /* 水平置中 */
-  justify-content: center; /* 可有可無，看需不需要垂直居中 */
-  margin: 20px auto;
+  max-width: 100%;
 }
 
+/* Header styling */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
 .media-player video {
   width: 100%;
-  max-width: 600px;
+  max-width: 60px;
   height: auto;
 }
 
+video {
+  padding-top: 60px;
+  width: 130%;
+}
+
 .custom-controls {
-  width: 100%;
-  max-width: 600px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-top: 10px;
+  width: 100%;
 }
 
 .custom-controls button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
+  padding: 10px 20px;
+  background-color: rgb(214, 148, 148);
   border: none;
-  padding: 8px 12px;
+  border-radius: 50px;
   cursor: pointer;
-  font-size: 16px;
   display: flex;
   align-items: center;
 }
+.custom-controls button:hover {
+  background-color: #ffb22d;
+}
 
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px 20px;
+}
+
+.timeline button {
+  background-color: #a4c7df; /* 溫暖亮橘色 */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: clamp(0.7rem, 1.4vw, 1rem);
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline button:hover {
+  background-color: #e39893; /* 滑過時更亮一點 */
+}
+
+.timeline button:active {
+  transform: scale(0.96);
+  background-color: #e39893;
+}
+/* 美化整個 step-text 區塊 */
+.step-text {
+  margin-top: 1rem;
+  padding-left: 3rem;
+  padding-top: 0.01px;
+  background-color: #fff8e1;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Fredoka", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 10px;
+}
+
+/* 美化每個步驟標題 */
+.step-text h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e8711b;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
+}
+
+/* 美化每個步驟的說明 */
+.step-text p {
+  font-size: 1.1rem;
+  background-color: #fff3cd;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #eeb249;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+/* Changed the colour so it fit the theme better */
 .progress-bar {
   width: 100%;
-  max-width: 600px;
   height: 10px;
-  background-color: #ddd;
+  background-color: #b3ade3;
   margin-top: 10px;
+  overflow: hidden;
 }
 
 .progress-bar span {
   display: block;
   height: 100%;
-  background-color: var(--main-bg-color);
+  background-color: #7974a2;
   width: 0;
   transition: width 0.3s ease;
+}
+
+.question {
+  padding: 12px 16px;
+  font-size: 48px;
+  font-family: "Fredoka", sans-serif;
+  color: rgb(214, 148, 148);
+  font-weight: 600;
 }
 
 /* Footer styling */
@@ -182,6 +266,7 @@ footer {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   text-align: center;
+  padding-top: 20px;
   padding: 10px 0;
   width: 100%;
   display: flex;

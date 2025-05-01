@@ -22,6 +22,7 @@
 
     <!-- Link to CSS & JavaScript -->
     <link rel="stylesheet" href="index.html" />
+    <link rel="stylesheet" href="step.html" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -40,11 +41,12 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Tutorial</a></li>
-          <li><a href="#">Words</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="step.html">Instruction</a></li>
         </ul>
       </nav>
     </header>
+    <!-- Step Timeline -->
 
     <!-- Main Content Section -->
     <main class="container">
@@ -55,10 +57,6 @@
           type="video/mp4"
         />
       </video>
-
-      <div class="progress-bar">
-        <span id="progress-bar-fill"></span>
-      </div>
 
       <div class="custom-controls">
         <button id="play-pause-btn" onclick="togglePlayPause()">
@@ -100,9 +98,13 @@
             height="24"
           />
         </button>
+
+        <!-- add the missing buttons or functionality here -->
+        <div class="progress-bar">
+          <span id="progress-bar-fill"></span>
+        </div>
       </div>
 
-      <!-- Step Timeline -->
       <section class="timeline">
         <button id="step-1-btn">Step 1</button>
         <button id="step-2-btn">Step 2</button>
@@ -114,9 +116,7 @@
         <button id="step-8-btn">Step 8</button>
         <button id="step-9-btn">Step 9</button>
         <button id="step-10-btn">Step 10</button>
-        <button id="done-btn">DONE!</button>
       </section>
-
       <!-- Step Instructions -->
       <section class="step-text">
         <h3>Step 1</h3>
