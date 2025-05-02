@@ -3,42 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berry Bunch Family Crafts - Tutorial</title>
 
-    <!-- Add font family of your choice -->
-    <link rel="preconnect" href="https://fonts.google.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Link for fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Link to CSS & JavaScript -->
+    <!-- Link to other page of HTML, CSS & JavaScript. I always forgot the way of link to Javascript is different haha -->
     <link rel="stylesheet" href="index.html" />
     <link rel="stylesheet" href="step.html" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
+    <!-- Link to Google Font website-->
+    <link rel="preconnect" href="https://fonts.google.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Link for fonts -->
+
+    <!-- Font 1, I choose DynaPuff as my basic font because it is san-serif which is easy for people to read on the interface and it is round and cute which fit with fit with my design concept.-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font 2, I choose this font as the one of the website title because even though it is round, but it looks a bit formaler than the first font, which I reckon the title and navgation bar is for adult. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Just like what I leart in assignment 1, I made a favicon for my website. This time I pick a colourful wind mill as my favicon to fit with my website style (Kids & Wind mill). -->
     <link rel="icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Title Section -->
+    <!-- Make the title as Berry Bunch Family Crafts. Last time I made it as assignment1, but I received the feedback from the previous assignment, so I use "Berry Bunch Family Crafts" in case to make better align with content and purpose.-->
+    <title>Berry Bunch Family Crafts - Tutorial</title>
   </head>
 
+  <!-- Design Concept: -->
   <body>
-    <!-- Header Section -->
+    <!-- Header & Navgation Section -->
+    <!-- I blend the header and navgation page together to save space for the cover image. I change the website name. I leart a theory of UIUX design - Make sure that the user know where are them in the webpage. So I put the name also Tutorial to let them know that this is the page teach them foling wind mill.-->
     <header class="headernav">
       <h1>Berry Bunch Family Crafts - Tutorial</h1>
       <nav>
+        <!-- I make the navgaction link to other page by different html file. This is my first time doing this, it actually cost sometime to figure out this.  -->
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="video.html">Video</a></li>
@@ -46,18 +56,19 @@
         </ul>
       </nav>
     </header>
-    <!-- Step Timeline -->
 
     <!-- Main Content Section -->
     <main class="container">
       <!-- Media Player Section -->
       <video id="craft-video">
+        <!-- As mention in class diction input the video file to the folder might be too large, so I input video via link. -->
         <source
           src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
           type="video/mp4"
         />
       </video>
-
+      <!-- Media Player Control Section -->
+      <!-- The orginal play/pause function -->
       <div class="custom-controls">
         <button id="play-pause-btn" onclick="togglePlayPause()">
           <img
@@ -69,6 +80,7 @@
           />
         </button>
 
+        <!-- I add a lower volume function, because I feel I use it quit often while I was watching this kind of tutorial. Usually they don't have a good balance of sound from the front till the end, Sometime the intro music is loud but people talk in lower voice. -->
         <button id="volume-down-btn" onclick="changeVolume(-0.2)">
           <img
             id="volume-down-img"
@@ -79,6 +91,7 @@
           />
         </button>
 
+        <!-- We have a lower volume button, so it make sense that we need one to increse the volume -->
         <button id="volume-up-btn" onclick="changeVolume(0.2)">
           <img
             id="volume-up-img"
@@ -89,6 +102,7 @@
           />
         </button>
 
+        <!-- I add the function to zoomin to fullscreen, It seems that this function is needed, Because I discover there are some steps in the video that you really cannot see thoughout small screen.   -->
         <button id="full-screen-btn" onclick="toggleFullScreen()">
           <img
             id="full-screen-img"
@@ -99,12 +113,12 @@
           />
         </button>
 
-        <!-- add the missing buttons or functionality here -->
+        <!-- Process Bar Section -->
         <div class="progress-bar">
           <span id="progress-bar-fill"></span>
         </div>
       </div>
-
+      <!-- I add the button of each step, after the time of the steps are set, the user can easily go back to the step they miss. I think is super usful, becasue I was the person keep moving the timeline while I miss the step, which is quite annoying. I wish I have this kind of function at that time, that's why I am making it now. -->
       <section class="timeline">
         <button id="step-1-btn">Step 1</button>
         <button id="step-2-btn">Step 2</button>
@@ -117,7 +131,11 @@
         <button id="step-9-btn">Step 9</button>
         <button id="step-10-btn">Step 10</button>
       </section>
+
       <!-- Step Instructions -->
+      <!-- To cooperate the step button above, we have to let the users know the defination of each step. On the other hand, I plan to let them scroll under the video with the time of each step, a bit like caption.
+       
+      I put the step in h3 and context in p, So I can adjust different style of text and colour in css more efficient. -->
       <section class="step-text">
         <h3>Step 1</h3>
         <p>
