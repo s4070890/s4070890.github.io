@@ -7,39 +7,50 @@
     <!-- Make the title as Berry Bunch Family Crafts. Last time I made it as assignment1, but I received the feedback from the previous assignment, so I use "Berry Bunch Family Crafts" in case to make better align with content and purpose.-->
     <title>Berry Bunch Family Crafts</title>
 
-    <!-- add the font family of your choice -->
     <!-- Link google font website -->
     <link rel="preconnect" href="https://fonts.google.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- font 1 -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- font 2 -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- link with css & javascript file, I always forget  -->
+    <!-- link with css & javascript file, I always forget that the way link Javascript is different from the way we link CSS and HTML file. -->
     <link rel="stylesheet" href="video.html" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
+    <!-- Design Concept(Home page): 
+ 
+First, I try to make it cute cause I assume this is a toturial of folding paper wind mill for kids. Due to the TA are kids I try to make it cute and friendly with round font and button. For colour I majority use the one with higher saturation to attractive them also make sure it is colourful(Playful)!
+
+Second, I also aim for make the navigation simple start by the "Start" in the home page. I stil maintain the navigation bar on the top in case if the user wants to go the "Instruction page" or back to "Home page" But, I put the name of the website and navgaction bar at the same line to increase the proportion of the cover image. On the other hand, because I thought navgation bar usually is for the adult that playing with kids, So I make it more simple and elegance style with the colour teal, which is inspire from the video frame.
+ 
+Last, I make the picture of the home page by Illstrator. I inspire by the items you need to prepare in the video and the wind mill we are making throughout video. I draw them in a cute way and add face and hands to make them easy to approach for kids! -->
+
+    <!-- Font 1, I choose DynaPuff as my basic font because it is san-serif which is easy for people to read on the interface and it is round and cute which fit with fit with my design concept.-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font 2, I choose this font as the one of the website title because even though it is round, but it looks a bit formaler than the first font, which I reckon the title and navgation bar is for adult. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Just like what I leart in assignment 1, I made a favicon for my website. This time I pick a colourful wind mill as my favicon to fit with my website style (Kids & Wind mill). -->
     <link rel="icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
   </head>
+
   <body>
-    <!-- Header Section -->
+    <!-- Header & Navgation Section -->
+    <!-- I blend the header and navgation page together to save space for the cover image. I change the website name. I leart a theory of UIUX design - Make sure that the user know where are them in the webpage. So I put the name also Tutorial to let them know that this is the page teach them foling wind mill.-->
     <header class="headernav">
       <h1>Berry Bunch Family Crafts - Tutorial</h1>
+      <!-- I make the navgaction link to other page by different html file. This is my first time doing this, it actually cost sometime to figure out this.  -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -49,19 +60,22 @@
       </nav>
     </header>
 
-    <!-- Navigation Section -->
-
+    <!-- Home Page Section -->
     <section class="cover">
+      <!-- I make a cute cover page in Illustrator and put it here -->
       <img src="cover.png" alt="Cover Image" />
+      <!-- I have a quick friendly setance in the centre of the cover page to show people what can they do in the website -->
       <div class="cover-text">
         <h2>Let's fold paper wind mill together!</h2>
+        <!-- I put a "Start" button in the centre of the Home page, because I reckon it could be easier for kids to navigate to the page of video tutorial. -->
         <button id="start-btn">Start !</button>
       </div>
     </section>
 
     <!-- Footer Section -->
+    <!-- Basic everything the same! Just change the year from 2024 to 2025 haha-->
     <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <p>&copy; 2025 Media Player Website. All rights reserved.</p>
       <p>All icons by <a href="https://icons8.com">Icons8</a></p>
     </footer>
   </body>
