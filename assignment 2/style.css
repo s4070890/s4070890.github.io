@@ -1,18 +1,22 @@
+/* The colour setting of the whole page */
+/* I keep some setting from the sample file,but also change some of them to fit my website better */
 :root {
   --primary-bg-color: #f6f4ea;
   --text-color: #333;
-  --main-bg-color: #b0d0c3; /* 改了顏色 */
+  --main-bg-color: #b0d0c3; /* I change the colour of the banner's background. To make it more formal and elegance cause this part I assume it's for the audlt explore website with kids */
   --main-text-color: #fff;
-  --main-btn-bg-color: #6896a8;
+  --main-btn-bg-color: #6896a8; /* The reason I chhose this colour for the button is inspire from the video itself's frame colour. */
 }
-
+/*I chhose this font is because it is round and sans serif, which means is cute and easy to read. Fit with my TA pretty well.*/
 .dynapuff-title {
   font-family: "DynaPuff", system-ui;
   font-optical-sizing: auto;
-  font-weight: 600; /* 實際數值，如 400, 500, 600, 700 */
+  font-weight: 600;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
+/* I use this font as my website name, cause it has a very good balance between cute and a bit formal at the same time. */
 .fredoka {
   font-family: "Fredoka", sans-serif;
   font-weight: 700; /* 可改成 300、500、700... 看你需要的粗細 */
@@ -25,49 +29,58 @@
   max-width: 1000px;
   margin: 0 auto;
 }
-
+/*I already set the size of image in Illustrator */
 .cover-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/*Home page - Text*/
 .cover-text {
   position: absolute;
-  top: 55%; /* 垂直居中 */
-  left: 50%; /* 水平居中 */
-  transform: translate(-50%, -50%); /* 真正居中 */
-  text-align: center;
-  font-family: "DynaPuff", system-ui;
-  font-size: clamp(0.1rem, 4vw, 6rem);
-  color: rgb(214, 148, 148);
-  font-weight: 700;
-  padding: 20px;
+  top: 55%; /* Adjust it looks like in the centre cause we also have navigation bar on the same page, which use some space, so 55% looks better than 50% */
+  left: 50%; /* Align in centre */
+  transform: translate(-50%, -50%);
+  text-align: center; /*Align text in centre as well! in the space I left, while I made the cover image */
+  font-family: "DynaPuff", system-ui; /* Cute font to attract kids*/
+  font-size: clamp(
+    0.1rem,
+    4vw,
+    6rem
+  ); /* Font size adjust with the window size */
+  color: rgb(
+    214,
+    148,
+    148
+  ); /* I use the pink as the topic line because it is the contrast colour to the "Start" button below it.*/
+  font-weight: 700; /* Bold for topic line */
+  padding: 20px; /* Make some space between the text and Start button */
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
+/*Home page - Start button*/
 #start-btn {
-  padding: 10px 20px;
-  background-color: #6896a8;
-  color: #fff;
+  padding: 10px 20px; /* 10px=button's height, 20px=button's length */
+  background-color: #6896a8; /*The reason is in root section*/
+  color: #fff; /* Good visablilty and it is Achromatic color which makes the interface not colour overwhelming */
   border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: clamp(0.7rem, 2vw, 2rem);
+  border-radius: 50px; /*Just want to make the button round so it is cuter fit with the TA and the font I selected */
+  cursor: pointer; /*So user's mouse will change to a hand to tell them this is clickable*/
+  font-size: clamp(0.7rem, 2vw, 2rem); /*Font size adjust by the window size*/
 }
+/*Home page - Start button hoverover*/
 #start-btn:hover {
-  background-color: #e9b04d; /* 滑過時變深一點 */
+  background-color: #e9b04d; /*Change colour while user hover over, so users know this is a button. Even I set the mouse become hand when user hover over, but consider this is for kids I reckon is better to make it more obvious. I pick orange because it is Triadic Colors with green(Before hoverover) can create strong contrast but not glaring. */
 }
 
+/*Just maintain*/
 body,
 h1,
-p,
-ul {
+p {
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: "Arial", sans-serif;
   background-color: var(--primary-bg-color);
@@ -83,181 +96,167 @@ body {
 
 /* Create a container for the main content */
 .container {
-  max-width: 800px;
+  max-width: 800px; /*The size of the whole website */
   width: 100%;
   padding: 0px;
-  align-content: center;
-  flex: auto;
 }
 
 /* Header styling */
-
 .headernav {
   display: flex;
-  justify-content: space-between; /* h1 在左、nav 在右 */
-  align-items: center; /* 垂直置中 */
+  justify-content: space-between; /* make H1(Website name) on the left, nav on right side. */
+  align-items: center;
   background-color: var(--main-bg-color);
-  color: #307793;
-  padding: 10px 20px;
+  color: #307793; /*Simliar colour to the Start button to make the page for unity. And same hue as banner but lower saturation and brightness to make it more readable */
+  padding: 10px 20px; /*Give some space so it wont touch the edge of the webpage*/
   width: 100%;
-  box-sizing: border-box;
 }
-
+/* Header styling - H1(Website Name) */
 .headernav h1 {
   margin: 0;
   font-size: 20px;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Fredoka", sans-serif; /*Font 2 cute, round but still formal*/
 }
-
+/* Header styling - ul(List) */
 .headernav nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 20px; /*Spave between each navigation buttons*/
   margin: 0;
   padding: 0;
 }
-
+/* Header styling - a(Texts in the list) */
 .headernav nav a {
   text-decoration: none;
-  color: #307793; /* 白色字或你設定的顏色 */
-  font-weight: bold;
+  color: #307793; /* Same as the header styling */
+  font-weight: bold; /*It looks balance with other texts*/
 }
-
+/* Header styling - a(Texts in the list) hoverover */
 .headernav nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /*I add an underline interaction while user hoverover so they know it is a button. */
+  /*I did not choose to change texts colour is because I can not find a colour that is obvious change and still fit which the backgrounf colour. */
 }
 
 /* Media player styling */
 .media-player {
   max-width: 100%;
 }
-
-/* Header styling */
-header {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-}
+/*Video styling */
 .media-player video {
   width: 100%;
   max-width: 60px;
   height: auto;
 }
-
+/*Video styling */
 video {
-  padding-top: 60px;
-  width: 130%;
+  padding-top: 60px; /*Give some space between navigation bar and the video*/
+  width: 130%; /* The orginal video is too small so I make it 130% */
 }
-
+/*Player button & timeline styling*/
 .custom-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
+  display: flex; /* Align proply */
+  gap: 1rem; /* some space between each function to avoid user click on the one they don't want.*/
+  margin-top: 10px; /* Space between video*/
+  width: 100%; /* the total size of buttons and timeline. 100% is the same as the video.  */
 }
-
+/*Player buttons styling */
 .custom-controls button {
-  padding: 10px 20px;
-  background-color: rgb(214, 148, 148);
+  padding: 10px 20px; /* Same style as the "Start" button*/
+  background-color: rgb(
+    214,
+    148,
+    148
+  ); /* Use the same colour as the topline, until this page I try to use the colour I used in the Hmale page to avoid colour overwhleming */
   border: none;
-  border-radius: 50px;
-  cursor: pointer;
+  border-radius: 50px; /*Round cute button */
+  cursor: pointer; /* Mouse change to hand to show this is button*/
   display: flex;
   align-items: center;
 }
+/*Player buttons - hoverover styling */
 .custom-controls button:hover {
   background-color: #ffb22d;
 }
-
+/*Timeline buttons styling*/
 .timeline {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  padding: 25px 20px;
+  gap: 10px; /*space between each button*/
+  padding: 25px; /*space between timebar and step text*/
 }
-
 .timeline button {
-  background-color: #a4c7df; /* 溫暖亮橘色 */
-  color: #fff;
+  background-color: #a4c7df; /* Recall the colour I use in the home page cover image  */
+  color: #fff; /*Simple and nice readability*/
   border: none;
   border-radius: 20px;
-  padding: 6px 16px;
+  padding: 6px 16px; /* 6px=height of buttons, 16px=length of buttons */
   font-size: clamp(0.7rem, 1.4vw, 1rem);
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth colour transition*/
 }
-
 .timeline button:hover {
-  background-color: #e39893; /* 滑過時更亮一點 */
+  background-color: #e39893; /* contrast colour*/
 }
 
-.timeline button:active {
-  transform: scale(0.96);
-  background-color: #e39893;
-}
-/* 美化整個 step-text 區塊 */
+/* Step Text styling */
 .step-text {
-  margin-top: 1rem;
-  padding-left: 3rem;
+  margin-top: 1rem; /*Space between step button and text area*/
+  padding-left: 3rem; /*give some space of background and text*/
+  padding-right: 3rem; /*Give some space on the right side, otherwise it looks like someone just cut it haha*/
   padding-top: 0.01px;
-  background-color: #fff8e1;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff8e1; /*Colour in cover image */
+  border-radius: 16px; /*Round corner to fit with the whole website style*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* some right buttom shadow*/
   font-family: "Fredoka", sans-serif;
   color: #333;
-  line-height: 1.6;
-  padding-bottom: 10px;
+  line-height: 1.6; /*The text height for some more background */
+  padding-bottom: 10px; /*Space between steptext area and footer*/
 }
-
-/* 美化每個步驟標題 */
+/* Step Text styling - h3(Step1-10) */
 .step-text h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 600; /* bold */
   color: #e8711b;
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; /* Space between text and title*/
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
 }
-
-/* 美化每個步驟的說明 */
+/* Step Text styling - p */
 .step-text p {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /*smaller than the "step"*/
   background-color: #fff3cd;
   padding: 0.8rem 1rem;
-  border-left: 4px solid #eeb249;
-  border-radius: 8px;
+  border-left: 4px solid #eeb249; /*I use the colour to make the box looks 3d, otherwise I feel it is a bit bored. */
+  border-bottom: 4px solid #e0bf87; /* the bottom shadow i choose the same colour but with lower saturation and darker */
+  border-radius: 8px; /*round corner same as the background*/
   margin-bottom: 1rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
 }
-/* Changed the colour so it fit the theme better */
+/*Progress bar styling*/
 .progress-bar {
   width: 100%;
-  height: 10px;
-  background-color: #b3ade3;
-  margin-top: 10px;
+  height: 15px;
+  border: 0px;
+  border-radius: 10px; /* Make the process bar also round to fit with the whole style*/
+  background-color: #b3ade3; /* Changed the colour so it fit the theme better */
+  margin-top: 15px; /* make sure the time bar is align centre with the function buttons*/
   overflow: hidden;
 }
-
+/*Progress bar span styling*/
 .progress-bar span {
   display: block;
   height: 100%;
-  background-color: #7974a2;
+  background-color: #7974a2; /*Darker purple to show the time past*/
   width: 0;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease; /*smooth*/
 }
-
+/*The title line in instruction */
 .question {
-  padding: 12px 16px;
+  padding: 12px 16px; /*space with navigation bar*/
   font-size: 48px;
   font-family: "Fredoka", sans-serif;
-  color: rgb(214, 148, 148);
+  color: rgb(214, 148, 148); /*same as the homepage title line*/
   font-weight: 600;
 }
 
@@ -270,5 +269,5 @@ footer {
   padding: 10px 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; /*Make sure text in centre*/
 }
