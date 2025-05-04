@@ -1,18 +1,24 @@
+// Navigation - Start Button
+// I set that the interface will lead to the video tutorial page after click on "Start", Cause I reckon it is easier for kids (Just one button the the main area).
 document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.querySelector("#start-btn");
   if (startBtn) {
     startBtn.addEventListener("click", () => {
-      window.location.href = "http://127.0.0.1:3000/assignment%202/video.html";
+      window.location.href = "http://127.0.0.1:3000/assignment2/video.html";
     });
   }
 });
+
+//Getting Dom
 const video = document.getElementById("craft-video");
 const playPauseBtn = document.getElementById("play-pause-btn");
 const playPauseImg = document.getElementById("play-pause-img");
 const progressBarFill = document.getElementById("progress-bar-fill");
 const stepTexts = document.querySelectorAll(".step-text h3, .step-text p");
 
-// STEP 對應的時間（秒）
+// Setting the video time to each step's buttons. I think it is eariser for user to go back to the step they missed.
+// Also I make the instrution below the video flip via video time.
+// Design Concept : I make this flipping instructions below the video, which i was inspire by the caption.
 const stepTimes = [
   { time: 14, text: "Step 1" },
   { time: 35, text: "Step 2" },
@@ -26,7 +32,7 @@ const stepTimes = [
   { time: 205, text: "Step 10" },
 ];
 
-// 播放 / 暫停功能
+// Orginal play and pause button
 function togglePlayPause() {
   if (video.paused) {
     video.play();
@@ -37,36 +43,37 @@ function togglePlayPause() {
   }
 }
 
-// 音量控制
+// Change volume. I set eash click +-0.2 in HTML file
 function changeVolume(amount) {
-  video.volume = Math.min(1, Math.max(0, video.volume + amount));
+  video.volume = Math.min(1, Math.max(0, video.volume + amount)); // Set the max as 1, min as 0.
 }
 
-// 全螢幕
+// Full screen
 function toggleFullScreen() {
   if (video.requestFullscreen) {
     video.requestFullscreen();
   }
 }
 
-// 更新播放進度條
+// Timeline
 video.addEventListener("timeupdate", () => {
-  const percent = (video.currentTime / video.duration) * 100;
-  progressBarFill.style.width = percent + "%";
-  updateStepText(video.currentTime);
+  const percent = (video.currentTime / video.duration) * 100; // the whole video time = 100%, the video current time = ?% og the whole video
+  progressBarFill.style.width = percent + "%"; //fill the timeline by the current video time percentage of the whole video.
+  updateStepText(video.currentTime); //
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const video = document.querySelector("video");
   const progressBar = document.getElementById("progressBar");
   const progressFill = document.getElementById("progressFill");
 
-  // 更新進度條填充
+  // Fill the timeline by percentage.
   video.addEventListener("timeupdate", function () {
     const percent = (video.currentTime / video.duration) * 100;
     progressFill.style.width = `${percent}%`;
   });
 
-  // 點擊進度條調整影片位置
+  // Click on the "Step 1-10" buttons to change the video time.
   progressBar.addEventListener("click", function (e) {
     const rect = progressBar.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -74,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     video.currentTime = percent * video.duration;
   });
 
-  // 拖動進度條
   let isDragging = false;
 
   progressBar.addEventListener("mousedown", function (e) {
@@ -101,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// 根據時間切換步驟顯示
+// Click on the "Step 1-10" buttons to change the video time.
 function updateStepText(currentTime) {
   stepTexts.forEach((el) => (el.style.display = "none"));
   for (let i = stepTimes.length - 1; i >= 0; i--) {
@@ -121,7 +127,7 @@ function updateStepText(currentTime) {
   }
 }
 
-// 每個 Step 按鈕導航時間
+// Click on the "Step 1-10" buttons to change the video time.
 stepTimes.forEach((step, index) => {
   const btn = document.getElementById(`step-${index + 1}-btn`);
   if (btn) {
@@ -130,3 +136,5 @@ stepTimes.forEach((step, index) => {
     });
   }
 });
+
+// After trying Javascript I feel CSS and HTML are super friendly haha. But I think the W3 school that you recommand helps alot! I reckon I am more familiar with CSS and HTML right now , but Javascript still feel challange.
