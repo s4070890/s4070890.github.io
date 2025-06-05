@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日式抽球機</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ✅ 背景音樂 -->
+    <audio id="bgm" src="audio/background_music.mp3" autoplay loop></audio>
+
+    <!-- ✅ 封面背景圖 -->
+    <div class="cover">
+      <img class="cover-img" src="img/cover.png" alt="封面圖" />
+    </div>
+
+    <!-- ✅ 圖片按鈕：抽獎 -->
+    <button
+      id="draw-btn"
+      style="
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 10;
+      "
+    >
+      <img src="img/flower_button.png" alt="抽獎按鈕" width="75" height="75" />
+    </button>
+
+    <!-- ✅ 抽籤機與角色小球 -->
+    <div class="main-content">
+      <div class="machine">
+        <img class="base-back" src="img/base_back.png" alt="base back" />
+        <img class="drum" id="drum" src="img/drum.png" alt="drum" />
+        <img class="base-front" src="img/base_front.png" alt="base front" />
+        <img class="handle" id="handle" src="img/handle.png" alt="handle" />
+      </div>
+
+      <!-- ✅ 小球角色展示 -->
+      <div class="balls-container">
+        <div class="ball" data-key="cat">
+          <img src="img/cat_ball.png" alt="cat ball" />
+          <div class="hover-card">Cat ball<br />Best Luck!</div>
+        </div>
+        <div class="ball" data-key="dog">
+          <img src="img/dog_ball.png" alt="dog ball" />
+          <div class="hover-card">Dog ball<br />Great Luck</div>
+        </div>
+        <div class="ball" data-key="deer">
+          <img src="img/deer_ball.png" alt="deer ball" />
+          <div class="hover-card">Deer ball<br />Good Luck</div>
+        </div>
+        <div class="ball" data-key="fox">
+          <img src="img/fox_ball.png" alt="fox ball" />
+          <div class="hover-card">Fox ball<br />Luck Coming!</div>
+        </div>
+        <div class="ball" data-key="blackcat">
+          <img src="img/blackcat_ball.png" alt="black cat ball" />
+          <div class="hover-card">Black cat ball<br />Unlucky</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ 抽獎結果彈窗 -->
+    <div class="popup hidden" id="popup">
+      <div class="popup-content">
+        <img id="popup-img" src="" alt="result" />
+        <h2 id="popup-name"></h2>
+        <h3 id="popup-luck"></h3>
+        <div class="popup-desc" id="popup-desc"></div>
+        <button id="close-popup">Close</button>
+      </div>
+    </div>
+
+    <!-- ✅ JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
