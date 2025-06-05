@@ -101,7 +101,7 @@ drawBtn.addEventListener("click", () => {
 
   // 播動畫
   drum.style.animation = "rotate360 1s linear infinite";
-  //handle.style.animation = "rotate360 1s linear infinite";
+  handle.style.animation = "rotate360 1s linear infinite";
 
   setTimeout(() => {
     // 停止旋轉動畫與旋轉音效
