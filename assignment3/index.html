@@ -4,30 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Link google font website -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font 1: Pangolin
+      I choose Pangolin as the font for the small card(omikuji) that appear while user hover over the animal balls on the Home Page. 
+
+      Because it looks like hand writing style and in Japanese culture omikuji usually write with Japanese calligrapgy style. I try on that kind of font, however it didn't go well with English Character. 
+      
+      So I decide on this font with handwrite vibe to align the traditional Japanese omikuji style, I make my final choice on Pangolin also because it is rounded good fit with my animal balls(Rounded as well)& overall cute vibe of the webpage. -->
     <link
       href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Favicon
+    As those previous assignments, I make a favicon for my website. I choose sakura as the simbol of the webpage due to it is the national flower of Japan. 
+    Despite, I actually consider on the Lucky machine as well, the reason I didn't end up with the machine icon because I feel it is too complicated in a such small favicon. -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
 
+    <!-- Make the title as Japanese Lucky Draw.
+     I was thinking just write Garagara(come from the sound while you span it) Chusenki the  Japanese name, But consider that people in Australia might not be able to understand it, So I change it to Japanese Lucky Draw.  -->
     <title>Japanese Lucky Draw</title>
+
+    <!-- Link with CSS file -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Design concept
+      -->
   </head>
+
   <body>
-    <!-- ✅ 背景音樂 -->
+    <!-- Background music
+     I choose a traditional Japanese style music play with tradition instruments. The vibe of the music aim to give user calm, clear mind set while entre the webpage. Same as they go to temple or shrine -->
     <audio id="bgm" src="audio/background_music.mp3" autoplay loop></audio>
 
-    <!-- ✅ 封面背景圖 -->
+    <!-- Background cover image
+     First, I made this cover in Adobe Illustrator before I start coding. The concept of it is come from shrine, so I use red and light yellow as the main colour. At the same time, I want to make it cutier owing to that I have the pink background.
+     
+     Second, Apart from that I use the ribbon bow which is very often to see in Japanese culture, the rectangle cloud and the Japanese pattern to enhance its Japanese vibe.
+     
+    Third, as you can see I mask the patteren in circle to recall the same shape as the animal balls.
+
+    Last, I choose all the colour from the traditional Japnese colour to make it smooth. I would said it kind of give a similiar vibe as morandi colour soft and smooth. -->
+
+    <!-- The font in the image is arial round, I just want to make sure it looks round to fit with the balls. And I make the curve text to fit with the machine's shape. -->
+
     <div class="cover">
       <img class="cover-img" src="img/cover.png" alt="封面圖" />
     </div>
 
-    <!-- ✅ 圖片按鈕：抽獎 -->
+    <!-- Start Button
+     I make the start as the shape of sakura to show the Japanese culture and use vivid red to make it pretty obvious for user to notice where to start at the first glance they get into the website.
+    On the other hand, the handle and button come with the same colour, due to people's mental expection will try to span via the handle I reckon link the handle and button with the same colour would help user to find the button. -->
+
+    <!-- BTW, I try to align it in the centre of the ribbon, so it looks like a knot.  -->
     <button
       id="draw-btn"
       class="flower-button"
@@ -47,7 +82,8 @@
       <img src="img/flower_button.png" alt="draw-btn" width="75" height="75" />
     </button>
 
-    <!-- ✅ 抽籤機與角色小球 -->
+    <!-- Draw Machine
+     I made the machine in Illustor and seprate into 4 layers, because I know I will only need 2 of them apply with animation -->
     <div class="main-content">
       <div class="machine">
         <img class="base-back" src="img/base_back.png" alt="base back" />
@@ -56,7 +92,10 @@
         <img class="handle" id="handle" src="img/handle.png" alt="handle" />
       </div>
 
-      <!-- ✅ 小球角色展示 -->
+      <!-- Animal Balls
+       The oringle lucky draw in Japan usually represent the result through different colour of balls, but I feel that is a bit boring to make five balls just in different colour. So I combile it with Japanese famous animals, which is cute and meaningful at the same time. Each animals have their tradition story behind and I use that as the reference to decide their lucky level.-->
+
+      <!-- I made these animal balls in Illustor as well to maintain they look like a set not only by shape, I make sure their colour saturation are in the same level and all have a bit red in there. Just in case if you notice I make the blackcat that symbol unlucky smaller, haha don't want people to get unlucky -->
       <div class="balls-container">
         <div class="ball" data-key="cat">
           <img src="img/cat_ball.png" alt="cat ball" />
@@ -81,7 +120,8 @@
       </div>
     </div>
 
-    <!-- ✅ 抽獎結果彈窗 -->
+    <!-- Draw Result
+    I would like the result display contain: the animal ball, the level of luck, some hint text in different occasion(Kind of like tarot) and a close button for user to get back to the home page.   -->
     <div class="popup hidden" id="popup">
       <div class="popup-content">
         <img id="popup-img" src="" alt="result" />
@@ -92,7 +132,10 @@
       </div>
     </div>
 
-    <!-- ✅ JS -->
+    <!--Link to javascript 
+    haha I forgot to link it in the begining, I was wordering why it does not work for so long. -->
     <script src="script.js"></script>
   </body>
+
+  <!-- This time I didn't make footer, since the feedback from last assignment I reckon will be better to delect it to improve the visual consistency  -->
 </html>

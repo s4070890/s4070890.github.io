@@ -1,12 +1,13 @@
 body {
   margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif; /* This is for the hint text of the draw result. The context is quite a lot, so I pick sans serif font to increase readability */
   background-color: #fff6f2;
+  /*Begie background to let user feel warm and pure at the same time, I feel the pure white is a bit too strong does not match with my background image style */
   overflow-x: hidden;
   position: relative;
 }
 .pangolin-regular {
-  font-family: "Pangolin", cursive;
+  font-family: "Pangolin", cursive; /* Cute handwriting style of font */
   font-weight: 400;
   font-style: normal;
 }
@@ -20,7 +21,7 @@ body {
 .cover-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Make sure the image fit with screen */
   display: block;
 }
 
@@ -30,12 +31,13 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 60px;
+  height: 60px; /* I am trying my best to put it at the centre of the ribbon */
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 10;
+  z-index: 10; /* Wanna keep button layout upper than background image */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* I tried to add animation on it but after finish I feel it is better without animation */
 }
 
 .main-content {
@@ -43,19 +45,22 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 5; /* Wanna keep button layout upper than background image */
   display: flex;
   flex-direction: column;
+  /* Trying to align the machine in the centre of the webpage also on the shadow I draw for it */
   align-items: center;
   padding-top: 25vh;
 }
 
 .machine {
   position: relative;
+  /* Analysis size for the machine */
   width: 417px;
   height: 379px;
   margin-bottom: 10px;
 }
+
 .machine img {
   position: absolute;
   top: 0;
@@ -64,17 +69,20 @@ body {
   user-select: none;
   pointer-events: none;
 }
+
 .drum,
 .handle {
   pointer-events: auto;
-  transform-origin: 57% 45%; /* X%, Y%：往右 55%、往下 60% */
-  transition: transform 0.7s ease;
+  transform-origin: 57% 45%; /* setting the centre for the span animation */
+  transition: transform 0.7s ease; /* Animation transtion */
 }
+
 .base-back,
 .base-front {
   pointer-events: none;
 }
 
+/* Add animation for rotation, I search how to do this in the youtube video but it was not working good, surprising my roomate came to help me fis it. It is all good right now :) */
 @keyframes rotate360 {
   from {
     transform: rotate(0deg);
@@ -85,7 +93,7 @@ body {
 }
 
 .balls-container {
-  position: absolute; /* 依你的排版需求放置 */
+  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -103,18 +111,20 @@ body {
   gap: 30px;
   padding: 20px 40px 80px;
 }*/
+
 .ball {
   position: absolute;
   width: 90px;
-  height: 90px;
+  height: 90px; /* Size of the balls */
   cursor: pointer;
-  transition: transform 0.3s;
-}
-.ball:hover {
-  transform: scale(1.1);
+  transition: transform 0.3s; /* Transform for the hover animation(zoomin a bit) */
 }
 
-/* 針對每個球設定位置（可依需求調整） */
+.ball:hover {
+  transform: scale(1.1); /* Expand balls 1.1 times while hover over */
+}
+
+/* Setting the position of each ball */
 .ball[data-key="cat"] {
   top: 55%;
   left: 15%;
@@ -140,7 +150,8 @@ body {
   left: 78%;
 }
 
-/* 把這裡的 transform 從 .ball 移到 .ball img */
+/* Rotate Balls
+I rotate the balls to make it more lively and looks like really someone throw them in the air */
 
 .ball[data-key="cat"] img {
   transform: rotate(10deg);
@@ -162,7 +173,7 @@ body {
   transform: rotate(15deg);
 }
 
-/* .ball 不再旋轉，只定位 */
+/* I kinda think this is same as position the balls, but as long as the code is running I am not going to move it hahaha  */
 .ball[data-key="cat"] {
   top: 55%;
   left: 15%;
@@ -211,105 +222,115 @@ body {
 .hover-card {
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 50%; /* Make the card align with the ball */
   transform: translateX(-50%);
-  background: #faf2ee; /* 淡木頭色 */
-  color: #8b4513; /* 深木頭棕色 */
+  background: #faf2ee; /* I choose the colour simlilar to the background */
+  color: #8b4513; /* I pick this wooden colour for text to recall the colour of the machine base and also shrine have a lot of wooden building*/
   font-weight: 700;
   font-family: "Pangolin", "Noto Sans JP", sans-serif;
-  letter-spacing: 0.1rem;
-  padding: 10px 16px;
-  border: 3px solid #f3cccb; /* 橘棕色木頭框 */
-  border-radius: 8px;
+  letter-spacing: 0.1rem; /* Wanna give an extra space between letters cause the oringinal text is too close kinda hard to read */
+  padding: 10px 16px; /* Size of the card */
+  border: 3px solid #f3cccb; /* Pink frame to fit with the whole background vibe */
+  border-radius: 8px; /* Make the round corner due to basic all the elements are round */
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10;
+  z-index: 10; /* Make sure the card's layer is above the ball, so there won't be chance to block the view */
   pointer-events: none;
   text-align: center;
-  box-shadow: 0 3px 6px rgba(139, 69, 19, 0.4);
+  box-shadow: 0 3px 6px rgba(139, 69, 19, 0.4); /* Box shadow come with the wooden colour */
 }
 
-/* 上方三角形屋頂效果 */
+/* The trangle on the top of the card */
 .hover-card::before {
   content: "";
   position: absolute;
-  top: -18px; /* 調整高度 */
+  top: -18px; /* Adjust position */
   left: 50%;
   transform: translateX(-50%);
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid #c5a8c6; /* 跟邊框一樣顏色的三角形 */
-  z-index: 11;
-}
-
-/* hover 出現 */
-.ball:hover .hover-card {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-8px);
+  border-bottom: 12px solid #c5a8c6; /* I choose the same colour from the background (the pattern area on the bottom left)*/
+  z-index: 11; /* Make sure the layer is above the card */
 }
 
 .ball:hover .hover-card {
   opacity: 1;
+  transform: translateX(-50%) translateY(-8px); /* Move it a bit upper while hover so it looks like pop out */
 }
 
+.ball:hover .hover-card {
+  opacity: 1;
+}
+
+/* The pop out background while display the result */
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  height: 100vh; /* Full screen */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* 50% transparency, so people can still see the background image, but also help user to focus on the result screen */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* I actually cannot remember how many layers did I set, but I just want to make sure it cover everythings that I set before so whatever...  */
 }
 .popup.hidden {
   display: none;
 }
+
+/* Result window */
 .popup-content {
-  background: #faf2ee;
-  padding: 24px;
-  border-radius: 20px;
+  background: #faf2ee; /* Same colour as the hover card */
+  padding: 24px; /* Space between the borden and text */
+  border-radius: 20px; /* Of course round corner cause all the elements are round */
   text-align: center;
   width: 90%;
-  max-width: 420px;
-  max-height: 80vh; /* 限制最大高度為視窗高度80% */
-  overflow-y: auto; /* 超出時可垂直捲動 */
+  max-width: 420px; /* Size setting */
+  max-height: 80vh; /* max height is 80% of the window cause I feel if it is over 80% then it it no longer looks like a pop out window */
+  overflow-y: auto; /* Scrollable if the context is too long*/
   box-sizing: border-box;
   font-family: "Pangolin", "Noto Sans JP", sans-serif;
-  color: #5e3f2b; /* 可以加一個柔和木色文字 */
-}
-.popup-content img {
-  width: 120px;
-}
-.popup-desc {
-  text-align: left;
-  font-size: 14px;
-  margin-top: 12px;
-  max-height: none; /* 移除高度限制 */
-  overflow-y: visible;
-  font-family: "Pangolin", "Noto Sans JP", sans-serif;
-  color: #5e3f2b; /* 可以加一個柔和木色文字 */
+  color: #5e3f2b; /* Colour for the animal's name */
 }
 
-/* 角色名稱 */
+.popup-content img {
+  width: 120px; /* The animal ball size in the result window */
+}
+
+/* Result hint text */
+.popup-desc {
+  text-align: left; /* Align on left increase the readability cause it is a long text */
+  font-size: 14px; /* Smaller text for context */
+  margin-top: 12px; /* Some space between the big title and text */
+  max-height: none;
+  overflow-y: visible; /* if the context too much Scroll */
+  font-family: "Pangolin", "Noto Sans JP", sans-serif;
+  color: #5e3f2b; /* Same colour as other text */
+}
+
+/* Name of animal */
 #popup-name {
   font-family: "Pangolin", cursive;
   font-size: 24px;
   margin-top: 12px;
 }
 
-/* 吉凶運勢 */
+/* Lucky level text */
 #popup-luck {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 18px;
-  color: #e14f50; /* 你也可以根據吉兇設定不同顏色 */
-  font-weight: 700rem;
+  font-size: 18px; /* A bit bigger than the hint text cause this the main result*/
+  color: #e14f50; /* Emphasis the result by red */
+  font-weight: 700rem; /* Bold */
 }
 
-/* 描述內容 */
+/* Hint text*/
 .popup-desc {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -318,12 +339,13 @@ body {
   color: #5e3f2b;
 }
 
+/* Close button */
 #close-popup {
-  margin-top: 16px;
-  padding: 8px 16px;
-  background-color: #f26d7d;
-  color: white;
+  margin-top: 16px; /* Space between hint text and button */
+  padding: 8px 16px; /* Space between text and border */
+  background-color: #f26d7d; /* Random pink la */
+  color: white; /* Text colour */
   border: none;
-  border-radius: 8px;
+  border-radius: 8px; /* Round style */
   cursor: pointer;
 }
