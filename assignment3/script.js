@@ -1,14 +1,19 @@
-const bgm = document.getElementById("bgm");
-const drawBtn = document.getElementById("draw-btn");
-const drum = document.getElementById("drum");
-const handle = document.getElementById("handle");
+// Callout elements
+const bgm = document.getElementById("bgm"); //Background music
+const drawBtn = document.getElementById("draw-btn"); //Start button
+const drum = document.getElementById("drum"); // The draw machine box
+const handle = document.getElementById("handle"); // The machine handle layer
+const popup = document.getElementById("popup"); //Result window
+const popupImg = document.getElementById("popup-img"); // Result animal ball image
+const popupName = document.getElementById("popup-name"); // Result animal name
+const popupLuck = document.getElementById("popup-luck"); // Result luck level
+const popupDesc = document.getElementById("popup-desc"); // Result text
+const closeBtn = document.getElementById("close-popup"); // Close result window button
 
-const popup = document.getElementById("popup");
-const popupImg = document.getElementById("popup-img");
-const popupName = document.getElementById("popup-name");
-const popupLuck = document.getElementById("popup-luck");
-const popupDesc = document.getElementById("popup-desc");
-const closeBtn = document.getElementById("close-popup");
+// Animal balls and Hint text
+// I decide to give user a bit guide text rather than just the result of luck level. I was inspire by tarot and omikuji. Apart from the overall discripe I also write some hint for people asking guide in different occasion such as: work or love etc ...
+
+// I know it is better to write these text in Html and I tried to write in there, but I encounter so problem to let them display in the result window. (They just keep display in the Home page, so I put them here and it work, but I don't know why??)
 
 const characters = {
   deer: {
@@ -85,26 +90,29 @@ function showConfetti() {
   setTimeout(() => confetti.remove(), 2000);
 }
 
+// Play sound of machine rolling
 let rollingSound = null;
+// Play sound after the result comeout
+// I pick different sound based on the luck level. All the sound I choose is play by tradition Japanese instrument.
 let charSound = null;
 
 drawBtn.addEventListener("click", () => {
-  // 停止背景音樂
+  // Stop playing background music after user click start button
   bgm.pause();
   bgm.currentTime = 0;
 
-  // 撥旋轉音效
+  // Play rolling machine sound
   rollingSound = new Audio("audio/start_sound.mp3");
   rollingSound.play();
-  rollingSound.loop = true; // 旋轉中持續播放
+  rollingSound.loop = true;
   rollingSound.volume = 1.0;
 
-  // 播動畫
+  // Play machine rolling animation
   drum.style.animation = "rotate360 1s linear infinite";
   handle.style.animation = "rotate360 1s linear infinite";
 
   setTimeout(() => {
-    // 停止旋轉動畫與旋轉音效
+    // Stop playing rolling sound after get result
     drum.style.animation = "none";
     handle.style.animation = "none";
     if (rollingSound) {
@@ -112,30 +120,27 @@ drawBtn.addEventListener("click", () => {
       rollingSound.currentTime = 0;
     }
 
-    // 抽出角色
+    // Random chance to pick out animals
     const keys = Object.keys(characters);
     const randomKey = keys[Math.floor(Math.random() * keys.length)];
     const character = characters[randomKey];
 
-    // 播角色音效
+    // Play sound match with each animal character
     charSound = new Audio(character.sound);
     charSound.play();
 
-    // 如果是 confetti 角色就噴彩帶
     if (character.confetti) showConfetti();
 
-    // 顯示結果彈窗
+    // Result window
     popupImg.src = character.image;
     popupName.innerText = character.name;
     popupLuck.innerText = character.luck;
     popupDesc.innerText = character.desc;
     popup.classList.remove("hidden");
-
-    // 音效播完後，不做任何事（等使用者關閉彈窗）
   }, 2000);
 });
 
-// 關閉彈窗後再播背景音樂
+// Play background music after user click on close button
 closeBtn.addEventListener("click", () => {
   popup.classList.add("hidden");
 
