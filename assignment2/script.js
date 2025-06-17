@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.querySelector("#start-btn");
   if (startBtn) {
     startBtn.addEventListener("click", () => {
-      window.location.href = "http://127.0.0.1:3000/assignment2/video.html";
+      window.location.href =
+        "https://s4070890.github.io/assignment2/video.html";
     });
   }
 });
