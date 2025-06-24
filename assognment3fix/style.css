@@ -350,25 +350,10 @@ I rotate the balls to make it more lively and looks like really someone throw th
   cursor: pointer;
 }
 
-/* 📱 Responsive Design for mobile devices */
 @media (max-width: 768px) {
-  .cover {
-    height: auto;
-  }
-
-  .cover-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .flower-button {
-    width: 50px;
-    height: 50px;
-    bottom: 2rem;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
+  /* 整體內容縮放一點點留白 */
+  body {
+    font-size: 3.5vw;
   }
 
   .main-content {
@@ -376,60 +361,85 @@ I rotate the balls to make it more lively and looks like really someone throw th
   }
 
   .machine {
-    width: 90%;
-    max-width: 350px;
+    width: 80vw;
     height: auto;
-    aspect-ratio: 417 / 379; /* 根據你的圖片比例 */
+    aspect-ratio: 417 / 379;
   }
 
-  .balls-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+  .flower-button {
+    width: 14vw;
+    height: 14vw;
+    bottom: 5vh;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
   }
 
   .ball {
-    position: relative;
-    width: 60px;
-    height: 60px;
+    width: 14vw;
+    height: 14vw;
   }
 
   .hover-card {
-    font-size: 0.7rem;
-    padding: 6px 10px;
+    font-size: 3vw;
+    padding: 1.5vw 2vw;
+    border-width: 0.5vw;
+  }
+
+  .hover-card::before {
+    top: -3vw;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+    border-bottom: 3vw solid #c5a8c6;
   }
 
   .popup-content {
-    width: 90%;
-    max-width: 360px;
-    padding: 16px;
-    font-size: 0.9rem;
+    width: 90vw;
+    padding: 4vw;
   }
 
   .popup-content img {
-    width: 80px;
+    width: 20vw;
   }
 
   #popup-name {
-    font-size: 20px;
+    font-size: 5vw;
   }
 
   #popup-luck {
-    font-size: 16px;
+    font-size: 4vw;
   }
 
   .popup-desc {
-    font-size: 13px;
+    font-size: 3.5vw;
   }
 
   #close-popup {
-    padding: 6px 14px;
-    font-size: 14px;
+    font-size: 3.5vw;
+    padding: 2vw 4vw;
   }
+}
+
+.machine {
+  position: relative;
+  width: 417px;
+  aspect-ratio: 417 / 379;
+  max-width: 90vw;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.machine img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 保持整個圖層等比例填滿 */
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+.drum,
+.handle {
+  transform-origin: 57% 45%;
 }
